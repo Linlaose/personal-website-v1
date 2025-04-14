@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import { NAV_LINKS } from "./consts";
 export default function Home() {
   return (
     <main className="mx-auto min-h-screen max-w-[1440px] gap-16 font-[family-name:var(--font-geist-sans)] xl:px-32">
@@ -9,12 +9,11 @@ export default function Home() {
           <h1>Ryan Tsai</h1>
           <nav>
             <ul>
-              <li>
-                <Link href="/">Home</Link>
-              </li>
-              <li>
-                <Link href="/about">About</Link>
-              </li>
+              {NAV_LINKS.map(({ label, href }) => (
+                <Link key={label} href={href} title={label}>
+                  {label}
+                </Link>
+              ))}
             </ul>
           </nav>
         </header>

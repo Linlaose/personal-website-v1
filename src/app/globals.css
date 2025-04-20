@@ -8,8 +8,29 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-roboto-mono);
+
+  /* ========== 背景色區塊 ========== */
+  --color-primary: #0d0f1a; /* 主背景色 */
+  --color-navbar: #0f1226; /* 導航欄背景色 */
+  --color-hero: #141a2e; /* 英雄區塊背景色 */
+  --color-portfolio: #1a1433; /* 作品集區塊背景色 */
+  --color-services: #140f29; /* 服務區塊背景色 */
+  --color-skills: #142440; /* 技能區塊背景色 */
+  --color-contact: #140f29; /* 聯絡區塊背景色 */
+  --color-footer: #0d0d1f; /* 頁腳背景色 */
+  --color-contact-form: #171a26; /* 聯絡表單背景色 */
+  --color-input: #1f1738; /* 輸入框背景色 */
+
+  /* ========== 元件色彩區塊 ========== */
+  --color-button-primary: #402680; /* 主要按鈕顏色 */
+  --color-card: #241f47; /* 卡片背景色 */
+
+  /* ========== 文字顏色區塊 ========== */
+  --color-text-primary: #ffffff; /* 主要文字色 */
+  --color-text-secondary: #cccccc; /* 次要文字色 */
+  --color-text-footer: #b3b3b3; /* 頁腳文字色 */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,9 +43,12 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 @utility container {
   @apply mx-auto max-w-[1440px] xl:px-32;
+}
+
+@utility heading-gradient {
+  @apply bg-gradient-to-r from-[#00bfff] via-[#4169e1] to-[#8a2be2] bg-clip-text text-transparent;
 }

@@ -12,6 +12,7 @@
   --font-mono: var(--font-roboto-mono);
 
   --leading-120: 1.2;
+  --animate-gradient-pan-x: gradient-pan-x 1500ms ease-in-out infinite;
 
   /* ========== 背景色區塊 ========== */
   --color-primary: #0d0f1a; /* 主背景色 */
@@ -68,4 +69,20 @@ body {
 
 @utility heading-gradient {
   @apply bg-gradient-to-r from-[#00bfff] via-[#4169e1] to-[#8a2be2] bg-clip-text text-transparent;
+}
+
+@utility heading-gradient-flow {
+  @apply hover:animate-gradient-pan-x bg-gradient-to-r from-blue-300 via-blue-500 to-blue-300 bg-[length:200%_200%] bg-clip-text bg-left text-white hover:text-white/0;
+}
+
+@keyframes gradient-pan-x {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
 }

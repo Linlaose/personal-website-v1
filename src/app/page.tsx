@@ -1,18 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import { NAV_LINKS } from "./consts";
+
 export default function Home() {
   return (
-    <main className="min-h-screen gap-16 font-[family-name:var(--font-inter)]">
-      <header>
-        <div className="bg-primary container">
-          <h1>
-            <span className="text-text-primary">Ryan</span>
+    <main className="min-h-screen font-[family-name:var(--font-inter)]">
+      <header className="bg-primary">
+        <div className="container flex items-center justify-between xl:py-6">
+          <h1 className="heading-gradient-flow text-text-primary px-4 text-2xl leading-tight font-bold">
+            Ryan
           </h1>
           <nav>
-            <ul>
+            <ul className="text-text-secondary text-lg leading-120">
               {NAV_LINKS.map(({ label, href }) => (
-                <Link key={label} href={href} title={label}>
+                <Link
+                  key={label}
+                  href={href}
+                  title={label}
+                  className="transition-colors duration-200 hover:text-white not-first:xl:ml-4"
+                >
                   {label}
                 </Link>
               ))}

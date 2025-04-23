@@ -75,6 +75,10 @@ body {
   @apply hover:animate-gradient-pan-x bg-gradient-to-r from-blue-300 via-blue-500 to-blue-300 bg-[length:200%_200%] bg-clip-text bg-left text-white hover:text-white/0;
 }
 
+@utility button {
+  @apply bg-button-primary mt-8 cursor-pointer rounded-sm uppercase transition duration-300 hover:bg-[#6f3fff] hover:shadow-[0_0_4px_#6f3fff,0_0_8px_#6f3fff,0_0_12px_#6f3fff,0_0_24px_rgba(111,63,255,0.6)];
+}
+
 @keyframes gradient-pan-x {
   0% {
     background-position: left;

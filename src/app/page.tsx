@@ -7,8 +7,11 @@ export default function Home() {
     <main className="min-h-screen font-[family-name:var(--font-inter)]">
       <header className="bg-navbar">
         <div className="container flex items-center justify-between xl:py-6">
-          <h1 className="heading-gradient-flow text-text-primary px-4 text-2xl leading-tight font-bold">
-            Ryan
+          <h1 className="text-text-primary text-2xl leading-tight font-bold">
+            <span className="hover:animate-nod-right inline-block">R</span>
+            <span className="hover:animate-nod-right inline-block">y</span>
+            <span className="hover:animate-nod-right inline-block">a</span>
+            <span className="hover:animate-nod-right inline-block">n</span>
           </h1>
           <nav>
             <ul className="text-text-secondary text-lg leading-120">
@@ -26,10 +29,10 @@ export default function Home() {
           </nav>
         </div>
       </header>
-      <section id="hero" className="bg-hero">
+      <section id="hero" className="bg-hero group">
         <div className="container xl:py-40">
           <div>
-            <h2 className="heading-gradient w-fit text-7xl leading-120 font-bold uppercase">
+            <h2 className="group-hover:heading-gradient-flow w-fit text-7xl leading-120 font-bold uppercase">
               frontend
               <br />
               developer

@@ -12,7 +12,8 @@
   --font-mono: var(--font-roboto-mono);
 
   --leading-120: 1.2;
-  --animate-gradient-pan-x: gradient-pan-x 1500ms ease-in-out infinite;
+  --animate-gradient-pan-x: gradient-pan-x 3s ease-in-out infinite;
+  --animate-nod-right: nod-right 1000ms ease-in-out infinite;
 
   /* ========== 背景色區塊 ========== */
   --color-primary: #0d0f1a; /* 主背景色 */
@@ -72,7 +73,7 @@ body {
 }
 
 @utility heading-gradient-flow {
-  @apply hover:animate-gradient-pan-x bg-gradient-to-r from-blue-300 via-blue-500 to-blue-300 bg-[length:200%_200%] bg-clip-text bg-left text-white hover:text-white/0;
+  @apply animate-gradient-pan-x bg-gradient-to-r from-blue-300 via-blue-500 to-blue-300 bg-[length:200%_200%] bg-clip-text bg-left text-white/0;
 }
 
 @utility button {
@@ -88,5 +89,17 @@ body {
   }
   100% {
     background-position: left;
+  }
+}
+
+@keyframes nod-right {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0);
   }
 }

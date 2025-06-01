@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { NAV_LINKS } from "./consts";
+import HexGrid from "@/app/components/hexagons/HexGrid";
 
 export default function Home() {
   return (
@@ -47,11 +48,20 @@ export default function Home() {
           </button>
         </div>
       </section>
-      <section id="services">
-        <div className="container">services</div>
-      </section>
-      <section id="technologies">
-        <div className="container">technologies</div>
+      <section id="skills" className="bg-skills group">
+        <div className="container xl:py-8">
+          <div>
+            <h2 className="group-hover:heading-gradient-flow text-7xl leading-120 font-bold uppercase">
+              skills
+            </h2>
+            <h4 className="mt-2 text-lg leading-120">
+              The skills, tools and technologies I use:
+            </h4>
+            <div className="grid place-content-center">
+              <HexGrid />
+            </div>
+          </div>
+        </div>
       </section>
       <section id="portfolio">
         <div className="container">portfolio</div>

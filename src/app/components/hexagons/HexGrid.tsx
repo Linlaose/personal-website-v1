@@ -1,9 +1,32 @@
 import styles from "@/app/components/hexagons/HexGrid.module.scss";
 import clsx from "clsx";
+import Image from "next/image";
 import { CSSProperties } from "react";
+import {
+  ReactIcon,
+  CSSIcon,
+  HTMLIcon,
+  TypeScriptIcon,
+  GitIcon,
+  TailwindIcon,
+  MuiIcon,
+  DocusaurusOpenApiIcon,
+  NextIcon,
+} from "#/public/icons";
 
-const HONEYCOMB = [3, 4, 3];
-const ICONS = ["🚀", "🎸", "🤖", "🫶", "🔥", "🕹️", "👾", "✨", "🌴", "🖥️"];
+const HONEYCOMB = [1, 2, 3, 2, 1];
+const ICONS = [
+  GitIcon.src,
+  CSSIcon.src,
+  HTMLIcon.src,
+  TypeScriptIcon.src,
+  ReactIcon.src,
+  TailwindIcon.src,
+  MuiIcon.src,
+  DocusaurusOpenApiIcon.src,
+  NextIcon.src,
+];
+const style = { width: "36px", height: "36px", objectFit: "contain" } as const;
 
 const createCells = () => {
   let iconIndex = -1;
@@ -44,7 +67,14 @@ const HexGrid = () => {
                   className={styles["hexagon"]}
                   style={{ ...icon } as CSSProperties}
                 >
-                  {ICONS[offset - columnCount + index]}
+                  <Image
+                    src={ICONS[offset - columnCount + index]}
+                    alt=""
+                    width={36}
+                    height={36}
+                    style={style}
+                    priority
+                  />
                 </div>
               );
             })}
